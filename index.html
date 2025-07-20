@@ -1,1 +1,98 @@
-
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticketmaster Analyst - מערכת ויזואליזציה</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            direction: rtl;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .dashboard-button {
+            padding: 15px 30px;
+            font-size: 1.1em;
+            color: #fff;
+            background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+        .dashboard-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1e3c72;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ticketmaster Analyst - מערכת ויזואליזציה לקבלת החלטות חכמה</h1>
+    </header>
+    <div class="container">
+        <p>
+            מערכת Ticketmaster Analyst מספקת כלים ויזואליים מתקדמים לקבלת החלטות מושכלות בתחום מכירת וקניית כרטיסים. המטרות המרכזיות של המערכת הן זיהוי זמנים אופטימליים למכירה, מתן הנחות ממוקדות, וקביעת אסטרטגיות שיווק לפי ביקושים גלובליים.
+        </p>
+        <div class="button-container">
+            <a href="dash1.html" class="dashboard-button">מערכת 1 - דשבורד תפעולי</a>
+            <a href="dash2.html" class="dashboard-button">מערכת 2 - דשבורד ניהולי</a>
+            <a href="dash3.html" class="dashboard-button">מערכת 3 - דשבורד אסטרטגי</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Ticketmaster Analyst. כל הזכויות שמורות.</p>
+    </footer>
+    <script>
+        document.querySelectorAll('.dashboard-button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const href = button.getAttribute('href');
+                document.body.style.opacity = 0;
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
