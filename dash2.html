@@ -1,1 +1,93 @@
-
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דשבורד ניהולי - Ticketmaster Analyst</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            direction: rtl;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-align: right;
+        }
+        .tableau-container {
+            width: 100%;
+            height: 600px;
+            margin-top: 20px;
+        }
+        .back-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: transform 0.3s;
+        }
+        .back-button:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1e3c72;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>דשבורד ניהולי - תובנות שיווקיות</h1>
+    </header>
+    <div class="container">
+        <a href="index.html" class="back-button">חזרה לדף הראשי</a>
+        <p>
+            הדשבורד הניהולי מציג נתונים על רכישות כרטיסים ברחבי העולם דרך האפליקציה, האתר או הטלפון, ומסייע למנהלים לקבוע היכן לחזק את השיווק או להציע הנחות.
+        </p>
+        <div class="tableau-container">
+            <div id="tableauViz"></div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Ticketmaster Analyst. כל הזכויות שמורות.</p>
+    </footer>
+    <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <script>
+        function initViz() {
+            const containerDiv = document.getElementById("tableauViz");
+            const vizUrl = "https://public.tableau.com/views/Book1_17462261209120/Dashboard2?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link";
+            const options = {
+                width: "100%",
+                height: "600px",
+                hideTabs: true,
+                hideToolbar: true,
+            };
+            const viz = new tableau.Viz(containerDiv, vizUrl, options);
+        }
+        document.addEventListener("DOMContentLoaded", initViz);
+    </script>
+</body>
+</html>
